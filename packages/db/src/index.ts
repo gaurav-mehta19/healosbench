@@ -8,3 +8,9 @@ export function createDb() {
 }
 
 export const db = createDb();
+
+// Re-export schema tables so consumers don't need a direct drizzle-orm dep
+export * from "./schema";
+
+// Re-export common drizzle operators
+export { eq, and, or, desc, asc, sql, inArray, isNull, isNotNull } from "drizzle-orm";

@@ -6,12 +6,17 @@ import { authClient } from "@/lib/auth-client";
 import Dashboard from "./dashboard";
 
 export default async function DashboardPage() {
-  const session = await authClient.getSession({
-    fetchOptions: {
-      headers: await headers(),
-      throw: true,
-    },
-  });
+  let session;
+  try {
+    session = await authClient.getSession({
+      fetchOptions: {
+        headers: await headers(),
+        throw: true,
+      },
+    });
+  } catch {
+    redirect("/login");
+  }
 
   if (!session?.user) {
     redirect("/login");

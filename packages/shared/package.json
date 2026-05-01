@@ -1,0 +1,14 @@
+{
+  "name": "@test-evals/shared",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@test-evals/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
