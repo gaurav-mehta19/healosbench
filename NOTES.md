@@ -1,5 +1,28 @@
 # HEALOSBENCH — Notes
 
+## Local Setup
+
+Full setup instructions are in [`setup.md`](./setup.md). Quick start:
+
+```bash
+bun install
+
+# Copy env files and fill in ANTHROPIC_API_KEY + DATABASE_URL
+cp apps/server/.env.example apps/server/.env
+cp apps/web/.env.example apps/web/.env.local
+
+# Start Postgres, push schema, then run
+bun db:push
+bun dev                          # dashboard → http://localhost:3001
+
+# Or run evals directly from the CLI
+bun eval --strategy=zero_shot
+bun eval --strategy=few_shot
+bun eval --strategy=cot
+```
+
+---
+
 ## Results
 
 All three strategies run against 50 synthetic cases, model `claude-haiku-4-5-20251001`, concurrency=5.
