@@ -313,7 +313,7 @@ Instructs the model to reason step by step through 6 explicit categories before 
 
 ## What I Cut
 
-- **Multi-user auth** for the dashboard (Better-Auth is wired up but unused for the eval task).
+- **Multi-user auth** — removed entirely; the dashboard is open with no sign-in required.
 - **Prompt diff view** (stretch goal — would need storing the full prompt text, not just the hash).
 - **Active-learning hint** (stretch goal).
 - Retry on network errors (only retrying on 429; other errors fail fast).
