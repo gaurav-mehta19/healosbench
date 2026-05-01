@@ -26,8 +26,7 @@ All three strategies run against 50 synthetic cases, model `claude-haiku-4-5-202
 
 ### Full CLI Output
 
-<details>
-<summary>zero_shot — full case table</summary>
+**zero_shot**
 
 ```
 HEALOSBENCH — CLI Eval
@@ -104,10 +103,8 @@ Cache reads:       0 tokens
 Cache writes:      0 tokens
 Total cost:        $0.1545
 ```
-</details>
 
-<details>
-<summary>few_shot — full case table</summary>
+**few_shot**
 
 ```
 HEALOSBENCH — CLI Eval
@@ -184,10 +181,8 @@ Cache reads:       0 tokens
 Cache writes:      0 tokens
 Total cost:        $0.1853
 ```
-</details>
 
-<details>
-<summary>cot — full case table</summary>
+**cot**
 
 ```
 HEALOSBENCH — CLI Eval
@@ -264,7 +259,6 @@ Cache reads:       0 tokens
 Cache writes:      0 tokens
 Total cost:        $0.2516
 ```
-</details>
 
 ## Strategy Designs
 
