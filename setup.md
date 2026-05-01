@@ -23,7 +23,13 @@ bun install
 
 ### Server (`apps/server/.env`)
 
-This file already exists in the repo. Open it and fill in the two required values:
+Copy the example file and fill in the two required values:
+
+```bash
+cp apps/server/.env.example apps/server/.env
+```
+
+Then open `apps/server/.env` and set:
 
 ```env
 # Paste your Anthropic key here
@@ -49,10 +55,10 @@ openssl rand -base64 32
 
 ### Web (`apps/web/.env.local`)
 
-This file already exists and is pre-configured — no changes needed:
+Copy the example file — no further changes needed for local dev:
 
-```env
-NEXT_PUBLIC_SERVER_URL=http://localhost:8787
+```bash
+cp apps/web/.env.example apps/web/.env.local
 ```
 
 ---
